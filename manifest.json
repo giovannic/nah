@@ -2,15 +2,11 @@
   "name": "No Feed",
   "description": "Make me productive",
   "version": "1.0",
-  "permissions": [
-    "activeTab"
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "js": ["no_feed.user.js"]
+    }
   ],
-  "background": {
-    "scripts": ["script.js"],
-    "persistent": false
-  },
-  "browser_action": {
-    "default_title": "No Feed"
-  },
   "manifest_version": 2
 }
